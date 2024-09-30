@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/imgs/N2E.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <title>Tableau de bord</title>
+  </head>
+  <body>
+    <div class="content-container hidden">
+      <h1>Bienvenue, <%= user.firstname %> <%= user.lastname %>!</h1>
+      <h2>Voici votre tableau de bord.</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Téléphone</th>
+            <th>Date</th>
+            <th>Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% bookings.forEach(function(booking) { %>
+          <tr>
+            <td><%= booking.firstname %></td>
+            <td><%= booking.lastname %></td>
+            <td><%= booking.email %></td>
+            <td><%= booking.phone %></td>
+            <td><%= booking.date %></td>
+            <td><%= booking.message %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+      <a class="blue-btn" href="/">Réserver une nouvelle réunion</a>
+      <a class="blue-btn" href="/logout">Se déconnecter</a>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

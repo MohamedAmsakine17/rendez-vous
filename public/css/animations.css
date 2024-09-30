@@ -1,0 +1,108 @@
+.hidden {
+  opacity: 0;
+  transform: scale(0);
+  filter: blur(5px);
+  transition: opacity 1s, filter 1s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hidden {
+    transition: all 1s;
+  }
+}
+
+.show {
+  filter: blur(0);
+  opacity: 1;
+  animation: bounceIn 0.5s ease-out forwards; /* Bouncing animation on show */
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Hidden from different directions */
+.hidden-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.hidden-right {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.hidden-top {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.hidden-bottom {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 1s;
+}
+
+/* Show for different directions */
+.show-left {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.show-right {
+  transform: translateX(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.show-top {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.show-bottom {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
+.net1 {
+  transition-delay: 200ms;
+}
+.net2 {
+  transition-delay: 400ms;
+}
+.net3 {
+  transition-delay: 600ms;
+}
+.net4 {
+  transition-delay: 800ms;
+}
+.net5 {
+  transition-delay: 1000ms;
+}
+.net6 {
+  transition-delay: 1200ms;
+}
+
+.net7 {
+  transition-delay: 1400ms;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="icon" type="image/x-icon" href="/imgs/N2E.png" />
+    <title>Tableau de Bord Administrateur</title>
+  </head>
+  <body>
+    <div class="content-container hidden">
+      <h1>Tableau de Bord <span class="dark-blue">Administrateur</span></h1>
+      <h2>Liste des rendez-vous réservés</h2>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th class="lastname">Prénom</th>
+            <th class="email">Email</th>
+            <th class="tele">Téléphone</th>
+            <th class="date">Date</th>
+            <th class="msg">Message</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% bookings.forEach(function(booking) { %>
+          <tr>
+            <td><%= booking.firstname %></td>
+            <td class="lastname"><%= booking.lastname %></td>
+            <td class="email"><%= booking.email %></td>
+            <td class="tele"><%= booking.phone %></td>
+            <td class="date"><%= booking.date %> <%= booking.time %></td>
+            <td class="msg"><%= booking.message %></td>
+            <td>
+              <!-- Formulaire de suppression -->
+              <form
+                action="/admin/delete-booking/<%= booking._id %>"
+                method="POST"
+                onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer ce rendez-vous ?');"
+              >
+                <button class="delete-btn" type="submit">Supprimer</button>
+              </form>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+
+      <a class="blue-btn" href="/admin/users">Utilisateurs</a>
+      <a class="blue-btn" href="/admin/logout">Se déconnecter</a>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

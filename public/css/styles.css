@@ -1,0 +1,240 @@
+body {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../imgs/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-container {
+  width: 80%;
+  height: 90%;
+  background-color: #f3f3f3;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  display: flex;
+  overflow: hidden;
+}
+
+.left-content {
+  padding: 15px 0 0 60px;
+  width: 50%;
+}
+
+.right-content {
+  background-image: url("../imgs/meeting.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.user-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #2185d5;
+  right: 20px;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f3f3f3;
+  font-size: 25px;
+}
+
+.nav-brand {
+  font-size: 30px;
+  font-weight: bold;
+  color: #3a4750;
+}
+
+.dark-blue {
+  color: #2185d5;
+}
+
+.content {
+  padding: 20% 180px 80px 40px;
+  color: #3a4750;
+}
+
+h1 {
+  color: #303841;
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+p {
+  font-size: 24px;
+}
+
+.dark-black {
+  color: #303841;
+  font-weight: 600;
+}
+
+.blue-btn {
+  background-color: #2185d5;
+  color: #f3f3f3;
+  border: 0;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 15px 30px;
+  margin-top: 120px;
+  font-weight: bold;
+}
+
+.blue-btn:hover {
+  background-color: #3a4750;
+  transition-delay: 0ms;
+}
+
+@media only screen and (max-width: 1600px) {
+  .content {
+    padding: 20% 100px 80px 40px;
+  }
+
+  .left-content {
+    padding: 15px 0 0 40px;
+  }
+
+  h1 {
+    font-size: 31px;
+  }
+
+  p,
+  .blue-btn {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .content {
+    padding: 20% 40px 80px;
+  }
+
+  .left-content {
+    padding: 15px 0 0 30px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .blue-btn {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .left-content {
+    width: 60%;
+  }
+
+  .right-content {
+    width: 40%;
+  }
+
+  .content {
+    padding: 20% 40px 80px 0px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content {
+    padding: 20% 20px 80px 0px;
+  }
+
+  .left-content {
+    width: 75%;
+  }
+
+  .right-content {
+    width: 25%;
+  }
+
+  .content {
+    padding: 20% 40px 80px 0px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .right-content {
+    display: none;
+  }
+
+  .content {
+    padding: 20% 0px 80px 0px;
+  }
+
+  .left-content {
+    padding: 15px 25px;
+  }
+
+  .content-container {
+    width: 95%;
+    height: 90%;
+  }
+}
+
+@media only screen and (max-height: 900px) {
+  .content {
+    padding-top: 25%;
+  }
+}
+
+@media only screen and (max-height: 750px) {
+  .content {
+    padding-top: 8%;
+  }
+
+  .blue-btn {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .content {
+    padding-top: 3%;
+  }
+
+  .blue-btn {
+    margin-top: 50px;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  p {
+    margin: 0;
+  }
+}

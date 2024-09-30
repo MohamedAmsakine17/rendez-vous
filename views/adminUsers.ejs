@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Gestion des Utilisateurs</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="icon" type="image/x-icon" href="/imgs/N2E.png" />
+  </head>
+  <body>
+    <div class="content-container hidden">
+      <h1>Admin - Tous les Utilisateurs</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th class="email">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(user => { %>
+          <tr>
+            <td><%= user.firstname %></td>
+            <td><%= user.lastname %></td>
+            <td class="email"><%= user.email %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+      <a class="blue-btn" href="/admin/dashboard">Tableau de bord</a>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

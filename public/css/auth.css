@@ -1,0 +1,91 @@
+body {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url("../imgs/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.content-container {
+  width: fit-content;
+  height: fit-content;
+  background-color: #f3f3f3;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  overflow: hidden;
+  padding: 20px 45px;
+}
+
+.other-choice {
+  text-align: center;
+  font-weight: 600;
+}
+
+.other-choice a {
+  color: #2185d5;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+h1 {
+  color: #303841;
+  font-size: 40px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+input,
+.blue-btn {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+input {
+  box-sizing: border-box;
+  border: 0;
+  height: 45px;
+  padding-left: 10px;
+  font-size: 20px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid #2185d5;
+  transition: border 0.5s;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #2185d5;
+}
+
+.blue-btn {
+  background-color: #2185d5;
+  color: #f3f3f3;
+  border: 0;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.blue-btn:hover {
+  background-color: #3a4750;
+  transition-delay: 0ms;
+}
+
+@media only screen and (max-width: 600px) {
+  .content-container {
+    width: 80%;
+    height: fit-content;
+    padding: 10px 25px;
+  }
+}

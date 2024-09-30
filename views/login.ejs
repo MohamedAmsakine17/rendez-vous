@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/imgs/N2E.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/auth.css" />
+    <title>Connexion</title>
+  </head>
+  <body>
+    <div class="content-container hidden">
+      <h1>Connexion</h1>
+      <form action="/login" method="POST">
+        <input type="email" name="email" placeholder="Email" required />
+        <br />
+        <input
+          type="password"
+          name="password"
+          placeholder="Mot de passe"
+          required
+        />
+        <br />
+        <button class="blue-btn" type="submit">Se connecte</button>
+      </form>
+      <div class="other-choice">
+        Pas de compte? <a href="/register">S'inscrire</a>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/imgs/N2E.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/animations.css" />
+    <link rel="stylesheet" href="/css/auth.css" />
+    <title>Inscription</title>
+  </head>
+  <body>
+    <div class="content-container">
+      <h1>Inscription</h1>
+      <form action="/register" method="POST">
+        <input type="text" name="firstname" placeholder="Prénom" required />
+        <br />
+        <input type="text" name="lastname" placeholder="Nom" required />
+        <br />
+        <input type="email" name="email" placeholder="Email" required />
+        <br />
+        <input
+          type="password"
+          name="password"
+          placeholder="Mot de passe"
+          required
+        />
+        <br />
+        <input
+          type="password"
+          name="password2"
+          placeholder="Confirmer le mot de passe"
+          required
+        />
+        <button type="submit" class="blue-btn">S'inscrire</button>
+      </form>
+      <div class="other-choice">
+        Vous avez déjà un compte? <a href="/login">Se connecter</a>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
